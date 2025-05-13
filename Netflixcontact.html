@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Contact - Le monde du streaming</title>
+    <link href="Siteweb.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="NetflixSitoweb.html">Accueil</a></li>
+                <li><a href="NetflixAuteur.html">Auteur</a></li>
+                <li><a href="Netflixcontact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1><em>Contactez-nous</em> - Le monde du streaming</h1>
+        
+        <section>
+            <h2>Informations de Contact</h2>
+            <p>Pour toute demande de renseignement, de collaboration ou pour toute question relative à nos articles, veuillez nous contacter via les informations ci-dessous.</p>
+            <p><strong>Email:</strong> contact@lemondeostreaming.com</p>
+            <p><strong>Adresse:</strong> 68 Rue de Soleil, 69007, Lyon</p>
+        </section>
+
+        <section>
+            <h2>Formulaire d'inscription</h2>
+            <p>
+              Plongez dans l'univers de <strong>Le monde du streaming</strong> et ne manquez aucune nouveauté des plateformes audiovisuelles !
+              <em>Découvrez les coulisses de ces géants de l'industrie et restez à l'avant-garde des tendances du streaming.</em> 
+            </p>
+
+            <form id="formulaire" onsubmit="return validerFormulaire();" novalidate>
+                <fieldset>
+                    <legend>Informations personnelles</legend>
+
+                    <p>Civilité* :</p>
+                    <label><input type="radio" name="civilite" value="M" required> M</label>
+                    <label><input type="radio" name="civilite" value="Mme"> Mme</label>
+                    <label><input type="radio" name="civilite" value="Mlle"> Mlle</label>
+
+                    <label for="nom">Nom* :</label>
+                    <input type="text" id="nom" name="nom" required>
+
+                    <label for="prenom">Prénom* :</label>
+                    <input type="text" id="prenom" name="prenom" required>
+
+                    <label for="email">Adresse email* :</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="mdp">Mot de passe* :</label>
+                    <input type="password" id="mdp" name="motdepasse" required>
+
+                    <label for="cmdp">Confirmation du mot de passe* :</label>
+                    <input type="password" id="cmdp" name="confirmation_mdp" required>
+
+                    <label for="tel">Téléphone* :</label>
+                    <input type="tel" id="tel" name="telephone" required>
+
+                    <label for="daten">Date de naissance :</label>
+                    <input type="date" id="daten" name="date_naissance">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Adresse personnelle</legend>
+
+                    <label for="adresse">Adresse* :</label>
+                    <input type="text" id="adresse" name="adresse" required>
+
+                    <label for="cadresse">Complément d'adresse :</label>
+                    <input type="text" id="cadresse" name="complement_adresse">
+
+                    <label for="ville">Ville* :</label>
+                    <input type="text" id="ville" name="ville" required>
+
+                    <label for="cp">Code postal :</label>
+                    <input type="text" id="cp" name="code_postal" maxlength="5" required>
+
+                    <label for="pays">Pays* :</label>
+                    <select id="pays" name="pays" required>
+                        <option value="Fra" selected>France</option>
+                        <option value="Port">Portugal</option>
+                        <option value="Bel">Belgique</option>
+                        <option value="Chi">Chine</option>
+                        <option value="Esp">Espagne</option>
+                        <option value="Mol">Moldavie</option>
+                        <option value="Gre">Grèce</option>
+                        <option value="GrB">Grande-Bretagne</option>
+                        <option value="Ita">Italie</option>
+                        <option value="Pol">Pologne</option>
+                        <option value="Rus">Russie</option>
+                        <option value="Irl">Irlande</option>
+                        <option value="Lux">Luxembourg</option>
+                        <option value="PaB">Pays-Bas</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Option</legend>
+                    <input type="checkbox" id="abon" name="newsletter" checked>
+                    <label for="abon">Je m'abonne à la newsletter</label>
+                </fieldset>
+
+                <p><strong>* Champs obligatoires</strong></p>
+                <button type="submit">Valider</button>
+                <button type="reset">Réinitialiser</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Le monde du streaming. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        function validerFormulaire() {
+            alert("Merci pour votre inscription à la newsletter de Le Monde du Streaming !");
+            window.location.href = "merci.html"; 
+            return false; 
+        }
+    </script>
+
+</body>
+</html>
